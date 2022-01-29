@@ -10,5 +10,11 @@
     "dependencies": {
         "com.unity.inputsystem": "1.1.1",
         "com.unity.editorcoroutines": "1.0.0"
-    }
+    },
+    "samples": [
+        {
+            "displayName": "Vibration Samples",
+            "description": "Contains sample vibration and vibration sequences",
+            "path": "Samples"
+        }]
 }
