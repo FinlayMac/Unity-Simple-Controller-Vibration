@@ -1,0 +1,19 @@
+{
+    "name": "dev.thedesign.controllervibrationpackage",
+    "version": "1.0.0",
+    "displayName": "Easy way to implement vibration in controllers.",
+    "description": "An extended description on what this is about",
+    "unity": "2021.2",
+    "author": {
+        "name": "Finlay"
+
+
+    },
+    "dependencies": {
+        "com.unity.inputsystem": "1.1.1",
+        "com.unity.editorcoroutines": "1.0.0"
+    }
+
+
+
+}
