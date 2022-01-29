@@ -10,8 +10,8 @@
 
     },
     "dependencies": {
-        "com.unity.inputsystem": "1.1.1",
-        "com.unity.editorcoroutines": "1.0.0"
+        "com.unity.inputsystem": "1.1.1"
+       // "com.unity.editorcoroutines": "1.0.0"
     }
 
 
