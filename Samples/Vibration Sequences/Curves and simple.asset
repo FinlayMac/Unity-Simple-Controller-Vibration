@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Curves and simple
   m_EditorClassIdentifier: 
   sequence:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 7b4e87f664f2e414fba02ac27f287298, type: 2}
+  - {fileID: 11400000, guid: 5e562f5d7431c07478995524d424baea, type: 2}
+  - {fileID: 11400000, guid: c69ec3bc15ca3c04ba8d3306b3afeeb0, type: 2}

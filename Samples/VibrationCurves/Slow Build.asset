@@ -18,20 +18,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 7.9547644
-      outSlope: 7.9547644
+      inSlope: 0.08373598
+      outSlope: 0.08373598
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.056921087
+      outWeight: 0.10686129
     - serializedVersion: 3
-      time: 0.3
+      time: 3
       value: 1
-      inSlope: 0.61307126
-      outSlope: 0.61307126
+      inSlope: 1.1837722
+      outSlope: 1.1837722
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.534282
+      inWeight: 0.089154325
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -42,20 +42,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 7.9547644
-      outSlope: 7.9547644
+      inSlope: 0.08373598
+      outSlope: 0.08373598
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.056921087
+      outWeight: 0.10686129
     - serializedVersion: 3
-      time: 0.3
+      time: 3
       value: 1
-      inSlope: 0.61307126
-      outSlope: 0.61307126
+      inSlope: 1.1837722
+      outSlope: 1.1837722
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.534282
+      inWeight: 0.089154325
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
