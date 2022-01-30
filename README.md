@@ -1,5 +1,5 @@
 # Unity-Simple-Controller-Vibration
-A simple package for creating custom vibrations for gamepads
+A package for creating custom vibrations for gamepads using Scriptable Objects.
 
 The tools are reliant on the New Input System and Editor Coroutines (These are imported automatically when adding the package)
 
@@ -30,14 +30,17 @@ The assets are imported into the packages section.
 
  
 ## Samples (optional)
-To help get you started, samples have been provided.
+To help get you started, samples are provided.
  
 These samples can be added into your assets folder by clicking import after adding the package in the package manager.
- 
+ ![image](https://user-images.githubusercontent.com/34044928/151714608-53c3a49e-5241-4897-ab89-80b1a6dd2cc6.png)
+
  
  
 ## Implementation
 To use the package, add the vibration controller Component to a Game Object.
+![image](https://user-images.githubusercontent.com/34044928/151714652-a18f8b1c-8552-4e15-b952-566ec0396823.png)
+
  - Adding it to the player would be a good idea but not required
  - The vibration controller asset has the method Vibrate:
  - Supplying a vibration sequence to this method will play the vibration
@@ -47,10 +50,9 @@ To use the package, add the vibration controller Component to a Game Object.
 
 
 ### Example Implementation
+This example is only to show how to get started and I would recommend something cleaner.
 
-This script would be attached to a UI button and an On Click event would call the method Activate()
- - This example is only to show how to get started.
- - If you have not downloaded the [Samples](#samples-optional), you will need to [create vibration parts](#creating-vibration-assets) and then [the sequence](#testing-vibration-sequences)
+ - Create a new C# Script ActivateVibration and attach to a UI button.
  ```csharp
 using UnityEngine;
 using ControllerVibration;
@@ -63,16 +65,23 @@ public class ActivateVibration : MonoBehaviour
     { vibrateController.Vibrate(vibSequence.sequence); }
 }
  ```
- - Pressing the UI Button in game with a controller plugged in should make it vibrate.
+ - Set the On Click event to call the method Activate()
+ - Assign the public fields of ActivateVibration in the inspector
+ - If you have not downloaded the [Samples](#samples-optional), you will need to [create vibration parts](#creating-vibration-assets) and then [the sequence](#testing-vibration-sequences)
+![image](https://user-images.githubusercontent.com/34044928/151714960-865d4831-49bd-4a8d-a366-2d9e464e869a.png)
+
+ - Pressing the UI Button in game with a controller plugged in play the vibration sequence.
  - If you have problems, try [testing your Vibration Sequences](#testing-vibration-sequences) using the sample assets
  
 ## Creating Vibration Assets
 Simple and Curve vibration assets can be created by:
  - Assets > Create > Scriptable Objects > Vibration
- - (either through the main menu or the Assets folder context menu)
+ - (either through the main menu or the Assets folder right click menu)
 
 ### Simple Parts
 Simple parts have 2 settings.
+
+![image](https://user-images.githubusercontent.com/34044928/151715077-b1f65bc6-91ce-474e-93e4-70d995e4fccd.png)
 
  - Duration is the length of the vibration before stopping. 0 - inf
  - Strength is for the strength of the left(x) / right(y) motors. 0 - 1
@@ -80,15 +89,23 @@ Simple parts have 2 settings.
 
 
 ### Curve Part
+![image](https://user-images.githubusercontent.com/34044928/151715094-242ffa23-ba74-483b-a712-7f319dbe086d.png)
+
 Curve parts are created from 2 graphs.
 
- - The y axis indicates the strength of the rumble over time.
- - The x axis indicates the duration of the rumble
- - If one graph is longer than the other, the longer graph indicates the duration of the whole vibration part
+![image](https://user-images.githubusercontent.com/34044928/151715120-f0dfce83-2c10-46e9-9638-033f678b2dfa.png)
+
+ - The y axis indicates the strength of the rumble over time. (0 - 1)
+ - The x axis indicates the duration of the rumble (0 - inf)
+ - If one graph is longer than the other, the longer graph will be used as the duration of the whole vibration part
+
 
 ## Creating Vibration Sequences
 Sequences are used to play vibrations parts.
 
+![image](https://user-images.githubusercontent.com/34044928/151715201-eb3aefc2-19e2-4172-9003-623c1af11278.png)
+
+ - The VibrationController.cs will expect a sequence to be passed to it
  - Sequences can contain single or multiple vibration parts and are played in order.
  - Vibration sequences can be created by:
    - Assets > Create > Scriptable Objects > Vibration > Sequence
