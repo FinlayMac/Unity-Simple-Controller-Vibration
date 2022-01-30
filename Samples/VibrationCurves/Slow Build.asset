@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341639bedb5a23e47b19a2c61286193e, type: 3}
+  m_Name: Slow Build
+  m_EditorClassIdentifier: 
+  leftMotorVibrationOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 7.9547644
+      outSlope: 7.9547644
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.056921087
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 0.61307126
+      outSlope: 0.61307126
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.534282
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rightMotorVibrationOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 7.9547644
+      outSlope: 7.9547644
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.056921087
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 0.61307126
+      outSlope: 0.61307126
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.534282
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

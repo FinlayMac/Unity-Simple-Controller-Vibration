@@ -9,7 +9,7 @@ namespace ControllerVibration
     {
 
         //the current list being executed
-        private List<VibrationPart> CurrentVibrateList = new List<VibrationPart>();
+        private List<IVibrationPart> CurrentVibrateList = new List<IVibrationPart>();
 
 
 
@@ -23,7 +23,7 @@ namespace ControllerVibration
         #endregion
 
 
-        public void Vibrate(List<VibrationPart> newList)
+        public void Vibrate(List<IVibrationPart> newList)
         {
             if (CheckIfCanVibrate() == false) { return; }
 
@@ -31,7 +31,7 @@ namespace ControllerVibration
             //CurrentVibrateList = newList;
 
             //this actually copies
-            CurrentVibrateList = new List<VibrationPart>(newList);
+            CurrentVibrateList = new List<IVibrationPart>(newList);
             StartCoroutine(IVibrateManager());
         }
 
@@ -46,7 +46,7 @@ namespace ControllerVibration
         private IEnumerator IVibrateManager()
         {
             //Debug.Log("starting pattern");
-            foreach (VibrationPart data in CurrentVibrateList)
+            foreach (IVibrationPart data in CurrentVibrateList)
             { yield return StartCoroutine(IVibrate(data)); }
 
             //finishes the current list
@@ -56,13 +56,35 @@ namespace ControllerVibration
 
 
         /*Should only be called by vibrate manager*/
-        private IEnumerator IVibrate(VibrationPart data)
+        private IEnumerator IVibrate(IVibrationPart data)
         {
-            Gamepad.current.SetMotorSpeeds(data.strength.x, data.strength.y);
+            //initialises the vibrate (required for animated curves)
+            data.Activate();
 
-            //completes the vibration duration
-            yield return new WaitForSeconds(data.duration);
+            float duration = data.GetPartDataDuration();
 
+            bool repeat = data.UpdateFrame();
+
+            //if it needs to repeat check
+            if (repeat)
+            {
+                while (data.UpdateFrame())
+                {
+                    Vector2 strength = data.GetPartDataStrength();
+                    Gamepad.current.SetMotorSpeeds(strength.x, strength.y);
+                    //continues to the next frame
+                    yield return null;
+                }
+            }
+            //if it only needs to happen once
+            else
+            {
+
+                Vector2 strength = data.GetPartDataStrength();
+                Gamepad.current.SetMotorSpeeds(strength.x, strength.y);
+                //completes the vibration duration
+                yield return new WaitForSeconds(duration);
+            }
             //resets
             Gamepad.current.SetMotorSpeeds(0, 0);
         }
