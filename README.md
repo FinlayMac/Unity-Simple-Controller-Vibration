@@ -39,6 +39,7 @@ These samples can be added into your assets folder by clicking import after addi
  
 ## Implementation
 To use the package, add the vibration controller Component to a Game Object.
+
 ![image](https://user-images.githubusercontent.com/34044928/151714652-a18f8b1c-8552-4e15-b952-566ec0396823.png)
 
  - Adding it to the player would be a good idea but not required
