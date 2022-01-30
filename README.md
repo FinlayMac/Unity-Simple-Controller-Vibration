@@ -8,7 +8,7 @@ The tools are reliant on the New Input System and Editor Coroutines (These are i
 1. [Getting Started](#getting-started)
 2. [Samples](#samples-optional)
 3. [Implementation](#implementation)
-4. [Creating Vibration Assets](#creating-vibration-assets)
+4. [Creating Vibration Parts](#creating-vibration-parts)
 5. [Creating Vibration Sequences](#creating-vibration-sequences)
 6. [Testing Vibration Sequences](#testing-vibration-sequences)
 7. [Limitations](#limitations)
@@ -71,10 +71,12 @@ public class ActivateVibration : MonoBehaviour
  - If you have not downloaded the [Samples](#samples-optional), you will need to [create vibration parts](#creating-vibration-assets) and then [the sequence](#testing-vibration-sequences)
 ![image](https://user-images.githubusercontent.com/34044928/151714960-865d4831-49bd-4a8d-a366-2d9e464e869a.png)
 
- - Pressing the UI Button in game with a controller plugged in play the vibration sequence.
+ - With the game running, pressing the UI Button with a controller plugged will play the vibration sequence.
  - If you have problems, try [testing your Vibration Sequences](#testing-vibration-sequences) using the sample assets
  
-## Creating Vibration Assets
+## Creating Vibration Parts
+Vibration parts are the building blocks for vibration sequences.
+
 Simple and Curve vibration assets can be created by:
  - Assets > Create > Scriptable Objects > Vibration
  - (either through the main menu or the Assets folder right click menu)
@@ -118,7 +120,7 @@ You can test vibration sequences in the inspector without needing to go into run
  - Press the Test Sequence Button
  - The Controller should perform the vibration sequence
  - If your controller does not vibrate
-   - check its plugged in and on
+   - check it is plugged in and turned on
    - it might not have vibration support
    - your sequence might be empty
    - your parts in the sequence might have a duration of 0
