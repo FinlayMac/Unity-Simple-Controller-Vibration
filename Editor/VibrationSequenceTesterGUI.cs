@@ -1,4 +1,6 @@
 
+#if (UNITY_EDITOR) 
+
 using UnityEditor;
 using UnityEngine;
 //all for testing
@@ -102,3 +104,4 @@ namespace ControllerVibrationTester
         #endregion
     }
 }
+#endif
