@@ -5,10 +5,9 @@ namespace ControllerVibration
     [CreateAssetMenu(menuName = "Sciptable Objects/Vibration/Curve Part")]
     public class VibrationCurve : IVibrationPart
     {
-        [Header("Duration is defined by the longest curve")]
-        public AnimationCurve leftMotorVibrationOverTime = AnimationCurve.Linear(0, 0, 0.3f, 1);
-        public AnimationCurve rightMotorVibrationOverTime = AnimationCurve.Linear(0, 0, 0.3f, 1);
-
+       [Header("X Axis = Duration: \nIs the longest curve.\n\nY Axis = Strength: \nShould be between 0 and 1\n")]
+        public AnimationCurve leftVibeOverTime = AnimationCurve.Linear(0, 0, 0.3f, 1);
+        public AnimationCurve rightVibeOverTime = AnimationCurve.Linear(0, 0, 0.3f, 1);
 
 
         private float duration = 0;
@@ -32,9 +31,9 @@ namespace ControllerVibration
 
 
             //gets longer of both the curves 
-            duration = leftMotorVibrationOverTime[leftMotorVibrationOverTime.length - 1].time;
-            if (duration < rightMotorVibrationOverTime[rightMotorVibrationOverTime.length - 1].time)
-            { duration = rightMotorVibrationOverTime[rightMotorVibrationOverTime.length - 1].time; }
+            duration = leftVibeOverTime[leftVibeOverTime.length - 1].time;
+            if (duration < rightVibeOverTime[rightVibeOverTime.length - 1].time)
+            { duration = rightVibeOverTime[rightVibeOverTime.length - 1].time; }
         }
 
         //needs to loop so marked true
@@ -46,8 +45,8 @@ namespace ControllerVibration
             timer = Time.realtimeSinceStartup - startTime;
 #endif
 
-            strength.x = leftMotorVibrationOverTime.Evaluate(timer);
-            strength.y = rightMotorVibrationOverTime.Evaluate(timer);
+            strength.x = leftVibeOverTime.Evaluate(timer);
+            strength.y = rightVibeOverTime.Evaluate(timer);
 
             if (duration >= timer)
             {
