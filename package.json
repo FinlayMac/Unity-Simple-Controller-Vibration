@@ -16,11 +16,6 @@
             "displayName": "Vibration Samples",
             "description": "Contains sample vibrations (simple and animated) and vibration sequences",
             "path": "Samples"
-        },
-        {
-            "displayName": "Vibration Samples Package",
-            "description": "Use this one if the samples don't import correctly",
-            "path": "Samples2"
         }
     ]
 }
