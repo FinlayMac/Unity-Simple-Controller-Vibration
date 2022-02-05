@@ -1,6 +1,6 @@
 {
     "name": "dev.thedesign.controllervibrationpackage",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "displayName": "Finlay's Controller Vibration",
     "description": "Easy way to implement vibration in controllers.",
     "unity": "2021.2",
@@ -16,6 +16,11 @@
             "displayName": "Vibration Samples",
             "description": "Contains sample vibrations (simple and animated) and vibration sequences",
             "path": "Samples"
+        },
+        {
+            "displayName": "Vibration Samples Package",
+            "description": "Use this one if the samples don't import correctly",
+            "path": "Samples2"
         }
     ]
 }

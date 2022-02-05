@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 341639bedb5a23e47b19a2c61286193e, type: 3}
+  m_Script: {fileID: 11500000, guid: 679741a42864cd44983bd4aa32d0a966, type: 3}
   m_Name: Slow Build
   m_EditorClassIdentifier: 
   leftVibeOverTime:
@@ -19,19 +19,19 @@ MonoBehaviour:
       time: 0
       value: 0
       inSlope: 0
-      outSlope: 3.3333333
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.3
+      time: 3
       value: 1
-      inSlope: 3.3333333
-      outSlope: 0
+      inSlope: 0.93080515
+      outSlope: 0.93080515
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.05844474
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -43,19 +43,19 @@ MonoBehaviour:
       time: 0
       value: 0
       inSlope: 0
-      outSlope: 3.3333333
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.3
+      time: 3
       value: 1
-      inSlope: 3.3333333
-      outSlope: 0
+      inSlope: 0.93080515
+      outSlope: 0.93080515
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.05844474
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

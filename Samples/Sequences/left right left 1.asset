@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbfcd98bc4f11d64387ae790057c7bba, type: 3}
-  m_Name: curves and simple
+  m_Name: left right left 1
   m_EditorClassIdentifier: 
   sequence:
-  - {fileID: 11400000, guid: f8f92a993a8ef3a48bd19ae15b091beb, type: 2}
+  - {fileID: 11400000, guid: 5fdb2387b1bf3f4429d4d5372aefba2e, type: 2}
+  - {fileID: 11400000, guid: 5bae999ad5ff5d3408d85813f310fc3b, type: 2}
+  - {fileID: 11400000, guid: 4e8bd793226069741bf9fad32101adc2, type: 2}
   - {fileID: 11400000, guid: 5bae999ad5ff5d3408d85813f310fc3b, type: 2}
   - {fileID: 11400000, guid: 5fdb2387b1bf3f4429d4d5372aefba2e, type: 2}
