@@ -84,7 +84,7 @@ Simple and Curve vibration assets can be created by:
 ### Simple Parts
 Simple parts have 2 settings.
 
-![image](https://user-images.githubusercontent.com/34044928/151715077-b1f65bc6-91ce-474e-93e4-70d995e4fccd.png)
+![image](https://user-images.githubusercontent.com/34044928/152661265-e7f085f8-7d0b-4417-854c-df30919b4ffc.png)
 
  - Duration is the length of the vibration before stopping. 0 - inf
  - Strength is for the strength of the left(x) / right(y) motors. 0 - 1
@@ -92,7 +92,7 @@ Simple parts have 2 settings.
 
 
 ### Curve Part
-![image](https://user-images.githubusercontent.com/34044928/151715094-242ffa23-ba74-483b-a712-7f319dbe086d.png)
+![image](https://user-images.githubusercontent.com/34044928/152661300-2156bba0-e009-4151-9173-81e72ceabec9.png)
 
 Curve parts are created from 2 graphs.
 
