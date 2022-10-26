@@ -37,6 +37,11 @@ namespace ControllerVibration
 
         private bool CheckIfCanVibrate()
         {
+            if (Gamepad.all.Count <= 0)
+            {
+                Debug.LogWarning("No Controller connected");
+                return false;
+            }
             //Debug.Log("if already vibrating");
             if (CurrentVibrateList.Count > 0) { return false; }
             else { return true; }
